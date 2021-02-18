@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PokeInfo GO</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+
+    <header id="cabecalho">
+      <nav id="menu">
+        <ul type="disc">
+          <li id="home"><a class="fontePokemon" href="index.html">Home</a></li>
+          <li id="pokemon"><a class="fontePokemon" href="pokemon.html">Pokemón</a></li>
+        </ul>  
+      </nav> 
+      <h1>PokeInfo</h1> 
+      <img id="pokebola" src="imagens/pokebola.png">
+    </header>
+    <section id="interacoes">
+      <label for="ordernar"> <b>Ordenar por:</b> </label>
+      <select id="ordenar">
+        <option value="ordemCrescente">1 ao 151</option>
+        <option value= "ordemA-Z" id="ordem-az"> Nomes A - Z</option>
+        <option value="ordemZ-A" id="ordem-za"> Nomes Z - A</option>
+      </select>
+      <label for="filtroTipo"> <b>Filtrar por:</b> </label>
+      <select id="filtroTipo">
+        <option value="">Tipos</option>
+        <option value="water">Água</option>
+        <option value="dragon">Dragão</option>
+        <option value="electric">Elétrico</option>
+        <option value="fire">Fogo</option>
+        <option value="grass">Grama</option>
+        <option value="bug">Inseto</option>
+        <option value="fighting">Lutador</option>
+        <option value="normal">Normal</option>
+        <option value="psychic">Psíquico</option>
+        <option value="ground">Terrestre</option>
+        <option value="poison">Venenoso</option>
+      </select>
+      <label for="pesquisar"><b>Pesquisar:</b></label>
+      <input id ="pesquisar" type="text">
+    </section>
+    <main id="listaPokemon"></main>
+    <footer>
+      <p>Copyright &copy; 2020 - by Laura Deperon and Luana Santana<br/>
+        <a href="https://facebook.com/laura.deperonribeiro" target="_blank">Facebook Laura</a> | <a href="https://facebook.com/laura.deperonribeiro" target="_blank">Facebook Luana</a> </p>
+    </footer>
+    <script src="main.js" type="module"></script>
+  </body>
+</html>

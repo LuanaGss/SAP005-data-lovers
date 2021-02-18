@@ -3,10 +3,6 @@
     font-family: 'FontePokemon';
     src: url(fonts/Pokemon\ Solid.ttf);
 }
-@font-face{
-    font-family: 'FonteGo';
-    src: url(fonts);
-}
 
 body{
     background-image: url(imagens/plano-de-fundo.jpg);
@@ -14,26 +10,22 @@ body{
     background-size: cover;
     font-family: arial, sans-serif;
     text-align: justify;
-    font-size: large;
+    font-size: 17px;
     line-height: 1.5;
-    text-indent: 50px;
+    margin-top:3%;
 }
 
 nav#menu ul{
-    display: block;
     list-style: none;
-    position: absolute;
     background-color:#2e68ac;
-    border-radius: 5px;
+    border-radius: 20px;
     width: 65%;
-    margin: 50px 0px 0px 30%;
-    padding-left: 1%;
-    text-indent: 0px;
+    margin-left: 20%;
 }
 
 nav#menu li{
     display: inline-block;
-    padding: 5px 30px 5px 30px;
+    padding: 0.5% 9%;
     transition: background-color 1s;
     border-radius: 5%;
 }
@@ -42,18 +34,13 @@ nav#menu li:hover {
     background-color:#1f417b;
 }
 
-nav#menu h1{
-    display: none;
-}
-
-.fontePokemon{
+nav#menu a{
     color: #ffca06;
     text-decoration: none;
     font-family: 'FontePokemon', sans-serif;
-    font-size: xx-large;
+    font-size: 25px;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #1f417b;
-    text-align: center;
 }
 
 header h1{
@@ -62,49 +49,295 @@ header h1{
     color: #ffca06;
     -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: #2e68ac;
-    font-size: 50pt;
-    margin-top: -20px ;
+    font-size: 4vw;
+    margin-top: -8% ;
 }
 
 header img{
     width: 10%;
-    margin: -30px 0px 0px 130px;
+    margin: -2% 0% 2% 5%;
 }
 
 section#resumo{
     background-color:#2e68ac;
-    width: 50%;
+    width: 70%;
     margin: auto;
     display: block;
     border-radius: 5px;
-    margin-top: 10px;
-    padding: 0 5% 5% 5%;
+    padding: 2% 5% 5% 3%;
+    text-indent: 8%;
 }
 
-.dicas{
+section#resumo h2{
+    color: #ffca06;
+    font-family: 'FontePokemon', sans-serif;
+    font-size: 25px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #1f417b;
+    text-align: center;
+}
+
+div.dicas{
     background-color:  #ffca06;
     display: block;
-    font-size: smaller;
-    border-radius: 10px;
+    border-radius: 5px;
     padding: 15px;
-    /*height: 400px;*/
-    text-indent: 0px;
 }
 
-h3{
+div.dicas img{
+    width: 40%;
+    border-radius: 5%;
+    display: block;
+    margin: auto;
+}
+
+div h3{
     text-align: center;
     color: #2e68ac;
 }
 
 footer{
     clear: both; 
-    border-top: 1px solid #606060; 
+    border-top: 1px solid  #ffca06; 
     text-align: center;
     font-size: small;
+    line-height: 1.5;
 }
 
 footer a{
     text-decoration: none;
     color:  #1f417b;
 }
+ 
+#listaPokemon {
+    display:flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin-top: 50px;
+    
+}
 
+.flip-container {
+    width: 280px;
+    height: 400px;
+    perspective: 1000px;
+    margin:auto;
+  }
+
+  .flipper{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-container:hover .flipper{
+    transform: rotateY(180deg);
+}
+
+.front, .back{
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    backface-visibility: hidden;
+    text-transform: capitalize;
+    border-radius: 5px;
+    background: #2e68ac;
+    
+}
+
+.back{
+    transform: rotateY(180deg);
+}
+
+div.front h2 {
+    font-size: 20px;
+    text-align: center;
+    background: #ffc906e0;
+}
+
+div.front img {
+    display:block;
+    width: 50%;
+    margin: auto;
+}
+
+
+div.front span {
+    background: #ffc906e0;
+}
+
+div.back p {
+    background: #ffc906e0;
+    line-height: 1;
+    padding: 1%;
+}
+
+div.front p {
+    background: #ffc906e0;
+    text-align: center;
+}
+
+form{
+    margin: 0% 20%;
+    line-height: 2;
+}
+
+input#idade{
+    width: 12%;
+}
+
+input#telefone{
+    width: 38%;
+}
+
+input#email{
+    width: 70%;
+}
+
+form img{
+    display: flex;
+    float: rigth;
+    width: 40%;
+    margin: 14% auto;
+    border-radius: 5px;
+}
+
+form div{
+    display: block;
+    float: left;
+}
+
+@media (min-width:800px) and (max-width:1000px){
+    body {
+        font-size: 16px;
+    }
+    div.dicas img{
+        width: 80%;
+    } 
+    nav#menu li{
+        padding: 0.5% 8.0%;
+    }
+    nav#menu a{
+        font-size: 19px;
+    }
+    section#resumo h2{
+        font-size: 20px;
+    }
+    .flip-container {
+        width: 240px;
+        height: 405px;
+        margin-right: auto;
+    }
+    div.front h2 {
+        font-size: 20px;
+    }
+}
+@media (min-width:500px) and (max-width:800px){
+    body {
+        font-size: 15px;
+     }
+     div.dicas img{
+        width: 90%;
+     } 
+     nav#menu li{
+        padding: 0.5% 5.0%;
+     }
+     nav#menu a{
+        font-size: 17px;
+     }
+     section#interacoes {
+        font-size: 15px;
+     }
+     .flip-container {
+        width: 220px;
+        height: 380px;
+     }
+     form img{
+        width: 60%;
+     }
+}
+
+
+@media (min-width:320px) and (max-width:500px){
+    body {
+        font-size: 12px;
+    }
+    header h1{
+        font-size: 20px;
+        margin-top: -90px;
+        margin-left: 40px;
+    }
+    header img{
+        width: 20%;
+        margin-left: 50px;
+    }
+
+    div.dicas img{
+        width: 100%;
+    } 
+    nav#menu ul{
+        border-radius: 20px;
+        width: 30%;
+        margin-left: 140px;
+    }
+    nav#menu li{
+        padding: 0.5% 1.0%;
+        width: 60%;                   
+    }
+    nav#menu a{
+        font-size: 14px;
+    }
+    section#interacoes {
+        font-size: 12px;
+        width: 80px;
+        display: flex;
+        flex-direction: column;
+    }
+    #interacoes label {
+        justify-content: start;
+    }
+    input#pesquisar {
+        width: 250px;
+    }
+    section#resumo {
+        margin-top: 20px;
+    }
+    section#resumo h2{
+        font-size: 16px;        
+    }
+    .flip-container {
+        width: 220px;
+        height: 340px;
+        margin-right: auto;
+    }
+    div.front h2 {
+        font-size: 15px;
+        text-align: center;
+    }
+    input#nome {
+        width: 150px;
+        margin-bottom: 10px;
+    }
+    input#email {
+        width: 200px;
+        margin-bottom: 10px;
+    }
+    input#telefone {
+        margin-bottom: 10px;
+    }
+    input#idade {
+        margin-bottom: 10px;
+    }
+    textarea#mensagem {
+        width: 220px;
+        margin-bottom: 10px;
+    }
+    fieldset {
+        margin-left: -30px;
+    }
+    form img{
+        width: 80%
+     }
+}
